@@ -1,66 +1,90 @@
 
 # Türkiye Travel Fund
 
-Personal travel savings tracker and Turkey trip planner.
+منصة شخصية لتتبع ادخار أول رحلة لي إلى تركيا.
 
-مشروع شخصي لمتابعة تجميع مبلغ أول رحلة لي إلى تركيا، ومراقبة التقدم نحو هدف السفر.
+مشروع أنشأته لمساعدتي على تنظيم مدخراتي الشهرية، ومتابعة تقدمي نحو هدف السفر، والتخطيط للمصاريف والمدة المناسبة للرحلة.
 
-## Features
+## المميزات
 
-- Monthly savings tracking.
-- Extra deposits tracking.
-- Savings goal and progress monitoring.
-- Estimated travel date.
-- Extra money simulation.
-- Deposit history.
-- Savings achievements and motivation.
-- Export and import backups.
-- Arabic RTL interface.
-- Dark-only design.
-- Responsive layout for mobile and desktop.
+- متابعة الادخار الشهري.
+- تسجيل المبالغ الإضافية.
+- عرض إجمالي المدخرات ونسبة الإنجاز.
+- حساب المبلغ المتبقي للوصول إلى الهدف.
+- تقدير موعد الوصول إلى الميزانية.
+- محاكاة تأثير المبالغ الإضافية على موعد السفر.
+- إمكانية تأجيل موعد الرحلة وإعادة حساب الخطة.
+- إمكانية زيادة مدة الرحلة حسب الميزانية.
+- سجل كامل للإيداعات.
+- نظام إنجازات وتحفيز.
+- نظام Streak لمتابعة الاستمرارية.
+- تصدير واستيراد النسخ الاحتياطية.
+- متابعة التقويم الدراسي والإجازات.
+- واجهة متجاوبة للجوال والكمبيوتر.
 
-## Tech Stack
+## التقنيات المستخدمة
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
 - LocalStorage
 
-No frameworks or build tools required.
+لا يعتمد المشروع على Frameworks أو أدوات بناء خارجية.
 
-## Getting Started
+## الهوية البصرية
 
-1. Clone or download the repository.
-2. Open `index.html` in your browser.
-3. Start tracking your travel savings.
+يعتمد المشروع على الهوية البصرية الشخصية لمجتبى البشراوي.
 
-## Deployment
+- الوضع الداكن فقط.
+- اللغة العربية واتجاه RTL.
+- اللون الأساسي: `#3D8BFF`.
+- الخط: Rubik.
+- تصميم بسيط بحواف دائرية.
+- واجهة متوافقة مع الجوال والكمبيوتر.
 
-This project can be deployed using GitHub Pages.
+## تشغيل المشروع
 
-1. Open repository Settings.
-2. Navigate to Pages.
-3. Select Deploy from a branch.
-4. Choose `main`.
-5. Select `/(root)`.
-6. Click Save.
+لا يحتاج المشروع إلى تثبيت أي برامج أو حزم إضافية.
 
-## Data Storage
+1. حمّل ملفات المشروع.
+2. افتح ملف `index.html`.
+3. استخدم لوحة التحكم وابدأ تسجيل مدخراتك.
 
-The application uses browser LocalStorage to save progress.
+## النشر باستخدام GitHub Pages
 
-Data is stored locally in the browser and is not automatically synchronized across devices.
+يمكن تشغيل المشروع على الإنترنت مجاناً باستخدام GitHub Pages.
 
-Export backups regularly to avoid losing your progress.
+1. افتح Repository Settings.
+2. انتقل إلى Pages.
+3. اختر Deploy from a branch.
+4. حدد الفرع `main`.
+5. اختر المجلد `/(root)`.
+6. اضغط Save.
 
-## Academic Calendar
+بعد اكتمال النشر سيظهر رابط الموقع الخاص بك.
 
-Savings assumptions should be updated according to the official KFUPM academic calendar for the relevant academic year.
+## حفظ البيانات والخصوصية
 
-## Author
+يستخدم المشروع LocalStorage لحفظ بيانات المستخدم داخل المتصفح.
 
-**Mujtaba Albashrawi**
+- لا يحتاج إلى حساب.
+- لا يتطلب قاعدة بيانات.
+- لا تتم مزامنة البيانات تلقائياً بين الأجهزة.
+- يُنصح بتصدير نسخة احتياطية بشكل دوري.
+
+## التقويم الأكاديمي
+
+تعتمد خطة الادخار على الفترات الدراسية والإجازات المتوقعة في جامعة الملك فهد للبترول والمعادن (KFUPM).
+
+يجب تحديث المواعيد وفق التقويم الأكاديمي الرسمي عند صدوره.
+
+## المطور
+
+**مجتبى البشراوي**
+
+الموقع الشخصي:
+[albashrawi.github.io](https://albashrawi.github.io)
 
 ## License
 
-MIT License
+هذا المشروع مرخص بموجب MIT License.

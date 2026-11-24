@@ -1,82 +1,390 @@
-<!DOCTYPE html>
+html = r'''<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#141418">
-<title>Türkiye Travel Fund | مجتبى البشراوي</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#141418;--surface:#1D1D23;--raised:#26262E;--line:#2F2F3A;--ink:#F2F2F5;--muted:#A2A2B0;--accent:#3D8BFF;--accent-tint:#1B2C4A;--success:#69c99a;--danger:#e58b8b;--font:"Rubik","Segoe UI",Tahoma,system-ui,sans-serif;color-scheme:dark;box-sizing:border-box}
-*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:100px}body{background:var(--bg);color:var(--ink);font:17px/1.9 var(--font);-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-button,input,select{font:inherit}button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 23px;border:2px solid var(--accent);border-radius:999px;background:var(--accent);color:white;font-weight:600;cursor:pointer;transition:transform .2s,background .2s}button:hover{transform:translateY(-2px)}button.secondary{background:transparent;color:var(--accent)}button.secondary:hover{background:var(--accent);color:#fff}button.danger{background:#482c31;border-color:#75434b;color:#ffe5e5}input,select{width:100%;min-width:0;padding:10px 14px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:14px;outline:none}input:focus,select:focus{border-color:var(--accent)}label{display:block;color:var(--muted);font-size:14px;margin-bottom:5px}
-.wrap{max-width:1120px;margin-inline:auto;padding-inline:24px}.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding:14px 0 0;background:linear-gradient(var(--bg) 75%,transparent)}.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px;padding:8px 14px 8px 24px;background:var(--surface);border:1px solid var(--line);border-radius:999px}.logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:700}.logo-mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--accent-tint);color:var(--accent)}.logo b{color:var(--accent)}.navlinks{display:flex;gap:5px}.navlinks a{padding:6px 15px;border-radius:999px;color:var(--muted);font-size:14px;text-decoration:none}.navlinks a:hover{background:var(--raised);color:var(--ink)}.hero{padding:42px 0 24px}.eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.04em}.hero h1{font-size:clamp(38px,7vw,66px);line-height:1.2;margin:8px 0}.hero h1 b{color:var(--accent)}.muted{color:var(--muted)}.sub{font-size:14px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;padding-bottom:30px}.card{grid-column:span 6;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px;min-width:0;transition:border-color .25s,transform .25s}.card:hover{border-color:#2B4F8A;transform:translateY(-2px)}.card h2{font-size:20px;font-weight:600;margin-bottom:12px}.wide{grid-column:span 12}.third{grid-column:span 4}.maincard{grid-column:span 8}.side{grid-column:span 4}.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.big{font-size:clamp(30px,5vw,44px);font-weight:700;line-height:1.3}.accent{color:var(--accent)}.pill{display:inline-flex;align-items:center;padding:3px 14px;border-radius:999px;background:var(--accent-tint);color:var(--accent);font-size:13px;font-weight:600}.progress{height:10px;border-radius:999px;background:var(--raised);overflow:hidden;margin:14px 0 7px}.progress span{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:width 1.3s cubic-bezier(.33,1,.68,1)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.stat,.mini{padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:16px}.stat small,.mini small{display:block;color:var(--muted);font-size:12px}.stat strong{font-size:16px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.field{margin:9px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.notice{margin-top:12px;padding:12px 14px;background:var(--accent-tint);border:1px solid #2B4F8A;border-radius:16px;font-size:13px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.tab{background:var(--surface);border:1px solid var(--line);color:var(--muted);padding:7px 17px;border-radius:999px}.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}.pane{display:none}.pane.active{display:block}.item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.item small{display:block;color:var(--muted);font-size:13px}.badge{padding:3px 10px;border-radius:999px;background:var(--accent-tint);color:var(--accent);font-size:12px}.mutedbox{text-align:center;color:var(--muted);padding:20px}.monthgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.month{padding:10px;background:var(--bg);border:1px solid var(--line);border-radius:16px}.month strong{display:block;margin-bottom:5px}.month small{display:block;color:var(--muted);font-size:11px}.barline{height:8px;background:var(--raised);border-radius:999px;overflow:hidden}.barline span{display:block;height:100%;background:var(--accent)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}canvas{width:100%;height:220px;background:var(--bg);border:1px solid var(--line);border-radius:16px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:25px 0 35px}hr{border:0;border-top:1px solid var(--line);margin:16px 0}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}a{color:var(--accent)}@media(max-width:820px){.navlinks{display:none}.maincard,.side,.third,.card{grid-column:span 12}.monthgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:560px){.wrap{padding-inline:14px}.bar{padding-inline:12px}.formgrid,.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.monthgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:28px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11151c">
+  <title>Türkiye Travel Fund | صندوق رحلة تركيا</title>
+  <meta name="description" content="لوحة شخصية لمتابعة ادخار رحلة تركيا، الإيداعات، التقدم، والعد التنازلي.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#11151c;--surface:#171e28;--surface2:#1c2633;--surface3:#222f3e;
+      --line:#2b394b;--text:#edf3fb;--muted:#9baabd;--blue:#3D8BFF;
+      --blue2:#246bd0;--green:#36d399;--amber:#f5b84b;--red:#ff7185;
+      --font:'Rubik',Tahoma,sans-serif;--radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.8}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    .app{min-height:100vh;display:grid;grid-template-columns:250px minmax(0,1fr)}
+    .sidebar{position:sticky;top:0;height:100vh;background:#141b25;border-left:1px solid var(--line);padding:25px 17px;display:flex;flex-direction:column;z-index:5}
+    .brand{display:flex;align-items:center;gap:12px;padding:2px 8px 28px}
+    .brand-mark{width:43px;height:43px;border-radius:14px;background:#172b45;border:1px solid #31527a;color:var(--blue);display:grid;place-items:center;font-size:22px;font-weight:800}
+    .brand strong{display:block;font-size:15px}.brand small{color:var(--muted);font-size:11px}
+    .nav-label{color:#718198;font-size:10px;font-weight:700;padding:12px 12px 7px;letter-spacing:.06em}
+    .nav{display:grid;gap:5px}
+    .nav button{border:0;background:transparent;color:var(--muted);text-align:right;padding:11px 13px;border-radius:11px;display:flex;align-items:center;gap:12px;transition:.2s}
+    .nav button:hover{background:var(--surface2);color:var(--text)}
+    .nav button.active{background:#1b3554;color:#75b2ff}
+    .nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;flex:none}
+    .side-bottom{margin-top:auto}
+    .mini-goal{padding:15px;border:1px solid var(--line);background:var(--surface);border-radius:15px}
+    .mini-goal small{color:var(--muted)}.mini-goal strong{display:block;font-size:19px;margin:5px 0}
+    .mini-track,.track{height:7px;background:#2a3747;border-radius:20px;overflow:hidden}
+    .mini-track span,.track span{height:100%;display:block;background:linear-gradient(90deg,var(--blue2),#63a9ff);border-radius:20px;transition:width .4s}
+    .side-foot{color:#718198;font-size:10px;text-align:center;padding-top:18px}
+    .main{min-width:0}
+    .topbar{height:72px;padding:0 34px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#11151ceF;position:sticky;top:0;z-index:4;backdrop-filter:blur(14px)}
+    .crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--text)}
+    .top-actions{display:flex;align-items:center;gap:10px}
+    .icon-btn{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--muted);display:grid;place-items:center}
+    .avatar{width:36px;height:36px;border-radius:12px;background:#203b5d;color:#8fc2ff;display:grid;place-items:center;font-weight:700}
+    .content{width:min(1280px,100%);margin:auto;padding:30px 34px 55px}
+    .page{display:none;animation:fade .25s ease}.page.active{display:block}
+    @keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+    .page-head{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin-bottom:24px}
+    .eyebrow{color:var(--blue);font-size:11px;font-weight:700;display:flex;align-items:center;gap:8px}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #36d39918}
+    h1{font-size:27px;line-height:1.35;margin:7px 0 4px}h2{font-size:16px;margin:0}h3{font-size:14px;margin:0}
+    .sub{color:var(--muted);margin:0;font-size:12px}
+    .btn{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:11px;padding:9px 14px;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+    .btn:hover{transform:translateY(-1px);border-color:#46617f}
+    .btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+    .btn.ghost{background:transparent}
+    .grid{display:grid;gap:16px}
+    .stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:17px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:19px;min-width:0}
+    .stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}
+    .stat-icon{width:34px;height:34px;border-radius:11px;background:#1b3554;color:#70afff;display:grid;place-items:center;font-size:17px}
+    .stat-value{font-size:24px;font-weight:700;letter-spacing:-.5px;margin:11px 0 2px;direction:ltr;text-align:right}
+    .stat-note{font-size:10px;color:var(--muted)}
+    .hero-grid{grid-template-columns:minmax(0,1.55fr) minmax(270px,.8fr);margin-bottom:17px}
+    .fund-card{position:relative;overflow:hidden;background:linear-gradient(125deg,#192b40 0%,#172333 56%,#1a2634 100%);min-height:260px}
+    .fund-card:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #3d8bff20;border-radius:50%;left:-70px;top:-120px;box-shadow:0 0 0 28px #3d8bff08,0 0 0 58px #3d8bff05}
+    .fund-inner{position:relative;z-index:1}
+    .fund-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .pill{font-size:10px;padding:5px 9px;border-radius:30px;background:#36d39918;color:var(--green);border:1px solid #36d39930}
+    .fund-amount{font-size:34px;font-weight:800;margin:18px 0 0;direction:ltr;text-align:right}
+    .fund-amount small{font-size:14px;color:var(--muted);font-weight:500}
+    .fund-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin:3px 0 10px}
+    .fund-card .track{height:10px;background:#31445a}.fund-card .track span{background:linear-gradient(90deg,#3D8BFF,#72c4ff)}
+    .fund-bottom{display:flex;gap:24px;margin-top:20px;flex-wrap:wrap}
+    .fund-bottom span{display:block;color:var(--muted);font-size:10px}.fund-bottom b{font-size:13px}
+    .ring-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .ring-wrap{width:150px;height:150px;position:relative;margin:10px auto 8px}
+    .ring-wrap svg{width:100%;height:100%;transform:rotate(-90deg)}
+    .ring-bg{fill:none;stroke:#2b394b;stroke-width:10}.ring-progress{fill:none;stroke:var(--blue);stroke-width:10;stroke-linecap:round;stroke-dasharray:408.4;stroke-dashoffset:408.4;transition:stroke-dashoffset .6s}
+    .ring-center{position:absolute;inset:0;display:grid;place-content:center}
+    .ring-center strong{font-size:28px}.ring-center small{font-size:10px;color:var(--muted)}
+    .ring-caption{color:var(--muted);font-size:11px}
+    .lower-grid{grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr)}
+    .card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+    .text-link{color:#75b2ff;font-size:11px;background:none;border:0}
+    .deposit-list{display:grid;gap:0}
+    .deposit-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #263342}
+    .deposit-row:last-child{border-bottom:0;padding-bottom:0}
+    .deposit-symbol{width:36px;height:36px;border-radius:12px;background:#1b3554;color:#79b7ff;display:grid;place-items:center}
+    .deposit-info{flex:1;min-width:0}.deposit-info b{font-size:12px;display:block}.deposit-info small{color:var(--muted);font-size:10px}
+    .deposit-value{font-size:12px;font-weight:700;color:var(--green);direction:ltr}
+    .streak-card{background:linear-gradient(145deg,#252a32,#1b222c);position:relative;overflow:hidden}
+    .streak-number{font-size:44px;font-weight:800;line-height:1.2;margin-top:15px}
+    .streak-number span{font-size:19px;color:var(--amber)}
+    .streak-days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:19px}
+    .streak-day{text-align:center;color:var(--muted);font-size:9px}
+    .streak-day i{display:grid;place-items:center;height:29px;border-radius:9px;background:#303844;font-style:normal;margin-top:5px}
+    .streak-day i.done{background:#3b3322;color:var(--amber)}
+    .streak-note{font-size:10px;color:var(--muted);margin-top:12px}
+    .quick-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+    .section-title{margin:28px 0 13px;display:flex;justify-content:space-between;align-items:center}
+    .section-title small{color:var(--muted);font-size:10px}
+    .milestones{grid-template-columns:repeat(3,1fr)}
+    .milestone{display:flex;align-items:center;gap:12px}
+    .milestone-icon{width:40px;height:40px;border-radius:13px;background:#263747;color:#85baff;display:grid;place-items:center;font-size:18px}
+    .milestone b{font-size:12px;display:block}.milestone small{color:var(--muted);font-size:10px}
+    .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:11px;color:var(--muted)}
+    .field input,.field select{width:100%;border:1px solid var(--line);background:#121923;color:var(--text);border-radius:10px;padding:11px 12px;outline:none}
+    .field input:focus,.field select:focus{border-color:var(--blue)}
+    .field.full{grid-column:1/-1}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px}
+    table{width:100%;border-collapse:collapse;min-width:520px}
+    th,td{text-align:right;padding:13px 15px;border-bottom:1px solid #263342;font-size:11px}
+    th{color:var(--muted);font-weight:500;background:#1a2430}
+    td{color:#dce6f2}tr:last-child td{border-bottom:0}
+    .empty{text-align:center;color:var(--muted);padding:28px}
+    .calendar-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+    .cal-day-name{text-align:center;color:var(--muted);font-size:10px;padding:8px 0}
+    .cal-day{min-height:82px;padding:8px;border:1px solid var(--line);background:var(--surface);border-radius:11px;font-size:11px}
+    .cal-day.muted{opacity:.35}.cal-day.today{border-color:var(--blue);background:#192b40}
+    .cal-day .event{display:block;font-size:9px;color:var(--green);margin-top:5px}
+    .calendar-note{font-size:10px;color:var(--muted);margin-top:13px}
+    .settings-grid{grid-template-columns:1fr 1fr}
+    .setting-card p{color:var(--muted);font-size:11px}
+    .notice{padding:12px 14px;border:1px solid #3d8bff35;background:#3d8bff0d;color:#b7d7ff;border-radius:12px;font-size:11px;margin-bottom:17px}
+    .toast{position:fixed;bottom:22px;left:22px;background:#223449;border:1px solid #3b5878;color:#eaf4ff;padding:12px 17px;border-radius:12px;z-index:20;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s;font-size:12px}
+    .toast.show{opacity:1;transform:none}
+    .mobile-menu{display:none}
+    @media(max-width:1050px){.app{grid-template-columns:210px minmax(0,1fr)}.content{padding-inline:24px}.topbar{padding-inline:24px}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .app{display:block}.sidebar{position:fixed;right:-270px;width:250px;transition:right .25s;box-shadow:-20px 0 60px #0005}.sidebar.open{right:0}
+      .mobile-menu{display:grid}.topbar{height:62px;padding-inline:16px}.content{padding:23px 15px 40px}
+      .hero-grid,.lower-grid,.settings-grid{grid-template-columns:1fr}.page-head{align-items:flex-start;flex-direction:column}
+      h1{font-size:23px}.stats{gap:10px}.card{padding:15px}.stat-value{font-size:20px}
+      .milestones{grid-template-columns:1fr}.calendar-grid{gap:4px}.cal-day{min-height:66px;padding:5px;font-size:10px}
+    }
+    @media(max-width:390px){.stats{grid-template-columns:1fr 1fr}.fund-amount{font-size:28px}.stat-value{font-size:18px}}
+  </style>
 </head>
 <body>
-<header class="nav"><div class="wrap"><div class="bar"><div class="logo"><span class="logo-mark">M</span><span><b>مجتبى</b> البشراوي <small class="muted">/ TRAVEL FUND</small></span></div><nav class="navlinks"><a href="#overview">الرئيسية</a><a href="#deposit">الإيداعات</a><a href="#calendar">التقويم</a><a href="#planning">التخطيط</a><a href="#history">السجل</a></nav><div class="actions" style="margin:0"><button class="secondary" onclick="exportData()">تصدير</button><button class="secondary" onclick="document.getElementById('fileIn').click()">استيراد</button><input hidden id="fileIn" type="file" accept=".json" onchange="importData(event)"></div></div></div></header>
-<main class="wrap">
-<section class="hero"><div class="eyebrow">FIRST TRIP · PERSONAL SAVINGS TRACKER</div><h1>رحلتي إلى <b>تركيا</b></h1><p class="muted">كل شهر تقرّبني خطوة من أول رحلة في حياتي.</p></section>
-<div class="grid" id="overview">
-<section class="card maincard"><div class="row"><div><div class="eyebrow">رصيد صندوق السفر</div><div class="big"><span id="balance">٠</span> <span class="sub">ريال</span></div></div><span class="pill" id="goalTag">الهدف ٦٬٠٠٠ ر.س</span></div><div class="progress"><span id="progress"></span></div><div class="row sub"><span id="pct">٠٪</span><span id="left">متبقي —</span></div><div class="stats"><div class="stat"><small>الدفعة القادمة</small><strong id="nextPay">—</strong></div><div class="stat"><small>موعد الدفعة</small><strong id="nextDate">—</strong></div><div class="stat"><small>الوصول للهدف</small><strong id="forecast">—</strong></div></div></section>
-<section class="card side"><h2>الاستمرارية</h2><div class="big"><span id="streak">٠</span> <span class="sub">شهر متتالٍ</span></div><div class="barline"><span id="streakbar" style="width:0%"></span></div><p class="sub" id="streakmsg">ابدأ أول إيداع عشان تبني الستريك.</p><div class="notice" id="achievementMini">كل إيداع يقربك من هدفك.</div></section>
-<section class="card" id="deposit"><h2>تسجيل إيداع</h2><div class="formgrid"><div><label for="amount">المبلغ (ريال)</label><input id="amount" type="number" min="1" placeholder="٢٠٠"></div><div><label for="date">التاريخ</label><input id="date" type="date"></div><div><label for="kind">نوع الإيداع</label><select id="kind"><option value="study">ادخار الدراسة</option><option value="summer">ادخار الصيف</option><option value="mid">إجازة منتصف السنة</option><option value="extra">مبلغ إضافي</option></select></div><div><label for="note">ملاحظة</label><input id="note" placeholder="مثلاً: مكافأة"></div></div><div class="actions"><button onclick="addDeposit()">إضافة للصندوق</button><button class="secondary" onclick="quick(200)">+٢٠٠</button><button class="secondary" onclick="quick(500)">+٥٠٠</button></div></section>
-<section class="card"><h2>حاسبة المبلغ الإضافي</h2><div class="field"><label for="extra">المبلغ اللي حصلت عليه</label><input id="extra" type="number" oninput="simulate()" placeholder="مثلاً ٧٥٠"></div><div class="field"><label for="extraUse">وش تبي تسوي فيه؟</label><select id="extraUse" onchange="simulate()"><option value="early">أقدم موعد السفر</option><option value="spend">أزيد مصروف الرحلة</option><option value="extend">أمدد عدد الأيام</option><option value="split">أقسمه بين الاثنين</option></select></div><div id="simulation" class="notice">اكتب المبلغ عشان تشوف أثره. ما راح ينضاف تلقائيًا.</div><div class="actions"><button class="secondary" onclick="applyExtra()">تسجيله كإيداع</button></div></section>
-<section class="card third"><h2>خطة الادخار</h2><div class="field"><label>أشهر الدراسة (شهريًا)</label><input id="studyRate" type="number" value="200" onchange="saveSettings()"></div><div class="field"><label>إجازة منتصف السنة</label><input id="midRate" type="number" value="200" onchange="saveSettings()"></div><div class="field"><label>الإجازة الصيفية</label><input id="summerRate" type="number" value="500" onchange="saveSettings()"></div><div class="field"><label>هدف الصندوق</label><input id="goal" type="number" value="6000" onchange="saveSettings()"></div><div class="field"><label>بداية الادخار</label><input id="start" type="date" value="2027-01-10" onchange="saveSettings()"></div></section>
-<section class="card third"><h2>تفاصيل الرحلة</h2><div class="field"><label>شهر السفر المستهدف</label><input id="target" type="month" value="2028-06" onchange="saveSettings()"></div><div class="field"><label>مدة الرحلة (أيام)</label><input id="days" type="number" value="7" onchange="saveSettings()"></div><div class="field"><label>تكلفة اليوم الإضافي</label><input id="dayCost" type="number" value="250" onchange="saveSettings()"></div><div class="field"><label>احتياط الطوارئ</label><input id="reserve" type="number" value="700" onchange="saveSettings()"></div><div class="notice" id="tripFit">—</div></section>
-<section class="card third"><h2>إنجازاتي</h2><div id="achievements"></div></section>
-<section class="card wide" id="calendar"><h2>التقويم الأكاديمي للبترول</h2><p class="sub">مبني على التقويم الرسمي المنشور ٢٠٢٦–٢٠٢٧. التقويم الكامل لسنة دخولك ٢٠٢٧–٢٠٢٨ لم يصدر بعد، لذلك الأشهر اللاحقة تقديرية وقابلة للتعديل.</p><div class="formgrid" style="margin-top:12px"><div><label for="calYear">السنة</label><select id="calYear" onchange="renderCalendar()"><option>2027</option><option>2028</option><option>2029</option></select></div><div><label for="holidayRule">قاعدة السفر</label><select id="holidayRule" onchange="saveSettings()"><option value="yes">السفر في الإجازات الطويلة فقط</option><option value="no">لا تقيّد الموعد بالإجازة</option></select></div></div><div class="monthgrid" id="calendarGrid" style="margin-top:12px"></div><div class="notice"><strong>المواعيد الرسمية المنشورة:</strong> بداية الفصل الثاني ١٠ يناير ٢٠٢٧؛ آخر يوم دراسي ٢٤ مايو؛ الاختبارات النهائية ٢٥ مايو–٦ يونيو؛ بداية التدريب والفصل الصيفي ٢٠ يونيو ٢٠٢٧. إجازة عيد الفطر ٢٨ فبراير–١١ مارس. يونيو ويوليو مضبوطتان كفترة صيفية للادخار بمعدل ٥٠٠ ريال شهريًا؛ انتبه أن التدريب الصيفي يبدأ ٢٠ يونيو وقد يؤثر على وقتك. أغسطس–ديسمبر ٢٠٢٧ تقديري لحين صدور تقويم ٢٠٢٧–٢٠٢٨. <a href="https://registrar.kfupm.edu.sa/academic-calendar/next-semester/" target="_blank" rel="noopener">المصدر الرسمي</a>.</div></section>
-<section class="card" id="planning"><h2>محاكاة تقديم السفر</h2><div class="field"><label for="advanceAmount">مبلغ إضافي افتراضي</label><input id="advanceAmount" type="number" value="1000" oninput="advanceCalc()"></div><div class="field"><label for="tripTarget">المبلغ المطلوب</label><input id="tripTarget" type="number" value="6000" oninput="advanceCalc()"></div><div id="advanceResult" class="notice">—</div><p class="sub">الحسبة تقديرية حسب معدلات الادخار والتقويم الذي ضبطته.</p></section>
-<section class="card"><h2>تأجيل أو تمديد الرحلة</h2><div class="field"><label for="delay">الموعد الجديد</label><input id="delay" type="month" value="2028-09"></div><div class="actions"><button class="secondary" onclick="delayTrip()">اعتماد التأجيل</button><button class="secondary" onclick="resetTarget()">استعادة الموعد</button></div><div id="delayMsg" class="notice">التأجيل ما يحذف أي إيداع.</div><hr><h2>حساب التمديد</h2><div class="field"><label for="newDays">المدة الجديدة بالأيام</label><input id="newDays" type="number" value="9"></div><div class="field"><label for="extensionCash">المبلغ الإضافي المتوفر</label><input id="extensionCash" type="number" value="0"></div><button class="secondary" onclick="extensionCalc()">احسب المبلغ الناقص</button><div id="extensionResult" class="notice">—</div></section>
-<section class="card"><h2>تقسيم الميزانية</h2><p class="sub">قسّم هدفك بين الأساسيات والتسوق والأنشطة والطوارئ.</p><div class="field"><label>الأساسيات</label><input id="coreGoal" type="number" value="4200" onchange="saveSettings()"></div><div class="field"><label>التسوق</label><input id="shoppingGoal" type="number" value="500" onchange="saveSettings()"></div><div class="field"><label>الأنشطة</label><input id="activityGoal" type="number" value="600" onchange="saveSettings()"></div><div class="field"><label>الطوارئ</label><input id="emergencyGoal" type="number" value="700" onchange="saveSettings()"></div><div class="row"><span class="muted">إجمالي التوزيع</span><strong id="allocationTotal" class="accent">٦٬٠٠٠ ر.س</strong></div><p id="allocationWarning" class="sub"></p></section>
-<section class="card"><h2>نمو المدخرات</h2><canvas id="chart" width="700" height="230"></canvas><p class="sub">الرسم يعرض الإيداعات الفعلية المسجلة.</p></section>
-<section class="card wide" id="history"><h2>سجل الإيداعات</h2><div id="historyList"><div class="mutedbox">ما سجلت أي إيداع حتى الآن.</div></div></section>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">✦</div><div><strong>TRAVEL FUND</strong><small>رحلة تركيا · 2027</small></div></div>
+    <div class="nav-label">مساحة الرحلة</div>
+    <nav class="nav">
+      <button class="active" data-page="overview"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="8" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="15" width="7" height="6" rx="2"/></svg>نظرة عامة</button>
+      <button data-page="deposits"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7.5c0-1.7-2.2-3-5-3s-5 1.3-5 3 2.2 3 5 3 5 1.3 5 3-2.2 3-5 3-5-1.3-5-3"/></svg>الإيداعات والسجل</button>
+      <button data-page="calendar"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>التقويم والخطة</button>
+      <button data-page="achievements"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"/></svg>الإنجازات والستريك</button>
+    </nav>
+    <div class="nav-label">الإدارة</div>
+    <nav class="nav">
+      <button data-page="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 2.9-.2-.1a1.7 1.7 0 0 0-1.8.1l-.2.1h-3.4l-.1-.2a1.7 1.7 0 0 0-1.5-1l-.2-.1-2.9-1.7.1-.2a1.7 1.7 0 0 0-.1-1.8l-.1-.2v-3.4l.2-.1a1.7 1.7 0 0 0 1-1.5l.1-.2 1.7-2.9.2.1a1.7 1.7 0 0 0 1.8-.1l.2-.1h3.4l.1.2a1.7 1.7 0 0 0 1.5 1l.2.1 2.9 1.7-.1.2a1.7 1.7 0 0 0 .1 1.8l.1.2z"/></svg>الإعدادات والنسخ</button>
+    </nav>
+    <div class="side-bottom">
+      <div class="mini-goal"><small>هدف الرحلة</small><strong id="sideGoal">8,000 ر.س</strong><div class="mini-track"><span id="sideProgress" style="width:0%"></span></div><small id="sidePercent">0% من الهدف</small></div>
+      <div class="side-foot">صُنع بشغف · Albashrawi © 2026</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuBtn" aria-label="فتح القائمة">☰</button><div class="crumb">مشاريعي <span style="color:#64748b">/</span> <b id="crumbTitle">نظرة عامة</b></div></div>
+      <div class="top-actions"><button class="icon-btn" id="quickAdd" title="إضافة إيداع">＋</button><div class="avatar">م</div></div>
+    </header>
+
+    <div class="content">
+      <section class="page active" id="overview">
+        <div class="page-head"><div><div class="eyebrow"><i class="dot"></i> مشروع شخصي · قيد التقدم</div><h1>رحلتك تبدأ من هنا، مجتبى.</h1><p class="sub">كل إيداع صغير يقرّبك من تركيا. خلّنا نتابع التقدم خطوة بخطوة.</p></div><button class="btn primary" data-go="deposits">＋ سجّل إيداعاً</button></div>
+        <div class="grid stats">
+          <div class="card"><div class="stat-top">إجمالي المدخرات <span class="stat-icon">↗</span></div><div class="stat-value" id="statSaved">0 <small>ر.س</small></div><div class="stat-note">المبلغ الذي جمعته حتى الآن</div></div>
+          <div class="card"><div class="stat-top">المتبقي للهدف <span class="stat-icon">◎</span></div><div class="stat-value" id="statRemaining">8,000 <small>ر.س</small></div><div class="stat-note">المسافة المتبقية إلى الرحلة</div></div>
+          <div class="card"><div class="stat-top">أيام الالتزام <span class="stat-icon">🔥</span></div><div class="stat-value" id="statStreak">0</div><div class="stat-note">سلسلة تسجيل الإيداعات</div></div>
+          <div class="card"><div class="stat-top">عدد الإيداعات <span class="stat-icon">▤</span></div><div class="stat-value" id="statCount">0</div><div class="stat-note">كل خطوة محسوبة</div></div>
+        </div>
+        <div class="grid hero-grid">
+          <div class="card fund-card"><div class="fund-inner">
+            <div class="fund-head"><div><div class="eyebrow">صندوق الرحلة <span style="color:#91a8c2">· TURKIYE 2027</span></div><h2 style="margin-top:7px">هدف الادخار</h2></div><span class="pill">● مستمر</span></div>
+            <div class="fund-amount" id="fundSaved">0 <small>ر.س</small></div>
+            <div class="fund-meta"><span>التقدم نحو الهدف</span><b id="fundPercent">0%</b></div><div class="track"><span id="fundBar" style="width:0%"></span></div>
+            <div class="fund-bottom"><div><span>الهدف النهائي</span><b id="fundTarget">8,000 ر.س</b></div><div><span>المتبقي</span><b id="fundLeft">8,000 ر.س</b></div><div><span>موعد الرحلة المخطط</span><b id="tripDateLabel">صيف 2027</b></div></div>
+          </div></div>
+          <div class="card ring-card"><div class="card-head" style="width:100%;margin:0"><h2>نسبة الإنجاز</h2><span style="color:var(--muted);font-size:10px">LIVE</span></div><div class="ring-wrap"><svg viewBox="0 0 150 150"><circle class="ring-bg" cx="75" cy="75" r="65"/><circle class="ring-progress" id="ringProgress" cx="75" cy="75" r="65"/></svg><div class="ring-center"><strong id="ringPercent">0%</strong><small>من الهدف</small></div></div><div class="ring-caption" id="ringCaption">بداية جميلة، أول خطوة تنتظرك.</div></div>
+        </div>
+        <div class="grid lower-grid">
+          <div class="card"><div class="card-head"><h2>آخر الإيداعات</h2><button class="text-link" data-go="deposits">عرض السجل ←</button></div><div class="deposit-list" id="recentDeposits"><div class="empty">لا توجد إيداعات بعد. ابدأ بأول خطوة!</div></div><div class="quick-actions"><button class="btn primary" data-go="deposits">＋ إضافة إيداع</button><button class="btn" data-go="calendar">عرض الخطة</button></div></div>
+          <div class="card streak-card"><div class="card-head"><h2>سلسلة الالتزام</h2><span style="font-size:20px">🔥</span></div><div class="streak-number"><span>🔥</span> <b id="streakBig">0</b> <span style="font-size:14px;color:var(--muted)">يوم</span></div><div class="sub">سجّل إيداعاً لتحافظ على حماسك.</div><div class="streak-days" id="streakDays"></div><div class="streak-note" id="streakHint">ابدأ سلسلتك اليوم — الاستمرارية أهم من المبلغ.</div></div>
+        </div>
+        <div class="section-title"><h2>محطات الرحلة</h2><small>رحلة من التخطيط إلى الإقلاع</small></div>
+        <div class="grid milestones">
+          <div class="card milestone"><div class="milestone-icon">🎯</div><div><b>تحديد الهدف</b><small>تم تجهيز صندوق الرحلة</small></div></div>
+          <div class="card milestone"><div class="milestone-icon">💰</div><div><b>بناء الميزانية</b><small>تابع إيداعاتك باستمرار</small></div></div>
+          <div class="card milestone"><div class="milestone-icon">✈️</div><div><b>تركيا بانتظارك</b><small>الوجهة: تركيا · 2027</small></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="deposits">
+        <div class="page-head"><div><div class="eyebrow">متابعة مالية</div><h1>الإيداعات والسجل</h1><p class="sub">وثّق كل مبلغ تضيفه إلى صندوق الرحلة.</p></div></div>
+        <div class="grid form-grid">
+          <div class="card"><div class="card-head"><h2>إضافة إيداع جديد</h2><span class="stat-icon">＋</span></div>
+            <form id="depositForm">
+              <div class="field"><label for="depositAmount">المبلغ (ريال سعودي)</label><input id="depositAmount" type="number" min="1" step="1" placeholder="مثال: 200" required></div>
+              <div class="field"><label for="depositDate">تاريخ الإيداع</label><input id="depositDate" type="date" required></div>
+              <div class="field"><label for="depositType">نوع الإيداع</label><select id="depositType"><option value="شهري">ادخار شهري</option><option value="إضافي">إيداع إضافي</option><option value="مكافأة">مكافأة / دخل إضافي</option></select></div>
+              <div class="field"><label for="depositNote">ملاحظة (اختياري)</label><input id="depositNote" type="text" maxlength="70" placeholder="مثلاً: ادخار شهر ديسمبر"></div>
+              <button class="btn primary" type="submit" style="width:100%;justify-content:center">حفظ الإيداع</button>
+            </form>
+          </div>
+          <div class="card"><div class="card-head"><h2>ملخص الإيداعات</h2><span class="stat-icon">◈</span></div>
+            <div style="margin:20px 0"><div class="stat-note">إجمالي ما تم ادخاره</div><div class="stat-value" id="depositTotal">0 <small>ر.س</small></div></div>
+            <div class="fund-meta"><span>الإيداعات الشهرية</span><b id="monthlyTotal">0 ر.س</b></div><div class="track"><span id="monthlyBar" style="width:0%"></span></div>
+            <div style="margin-top:22px" class="fund-meta"><span>الإيداعات الإضافية</span><b id="extraTotal">0 ر.س</b></div><div class="track"><span id="extraBar" style="width:0%;background:var(--green)"></span></div>
+            <div class="notice" style="margin:22px 0 0">تُحفظ بياناتك تلقائياً على هذا الجهاز باستخدام التخزين المحلي في المتصفح.</div>
+          </div>
+        </div>
+        <div class="section-title"><h2>سجل العمليات</h2><small id="depositCountLabel">0 عملية</small></div>
+        <div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>النوع</th><th>الملاحظة</th><th>المبلغ</th><th>إجراء</th></tr></thead><tbody id="depositTable"><tr><td colspan="5" class="empty">لا توجد عمليات مسجلة.</td></tr></tbody></table></div>
+      </section>
+
+      <section class="page" id="calendar">
+        <div class="page-head"><div><div class="eyebrow">التخطيط الزمني</div><h1>التقويم والخطة</h1><p class="sub">نظّم ادخارك مع جدولك الدراسي، وعدّل مواعيدك حسب التقويم الفعلي.</p></div><button class="btn" data-go="settings">تعديل موعد الرحلة</button></div>
+        <div class="notice">التقويم المعروض أداة تخطيط شخصية. أدخل التواريخ الدراسية المؤكدة من التقويم الرسمي لجامعة الملك فهد للبترول والمعادن؛ لا تُعد التواريخ الافتراضية أدناه مواعيد جامعية رسمية.</div>
+        <div class="card"><div class="calendar-head"><button class="btn" id="prevMonth">→ السابق</button><h2 id="calendarTitle">—</h2><button class="btn" id="nextMonth">التالي ←</button></div><div class="calendar-grid" id="calendarGrid"></div><div class="calendar-note">يمكنك استخدام التقويم لتصور الأشهر وتخطيط الإيداعات. أضف مواعيدك الرسمية من الإعدادات عند توفرها.</div></div>
+        <div class="section-title"><h2>خطة الادخار المقترحة</h2><small>قابلة للتعديل من الإعدادات</small></div>
+        <div class="grid milestones"><div class="card milestone"><div class="milestone-icon">📚</div><div><b>فترة الدراسة</b><small id="studyPlan">ادخار 200 ر.س شهرياً</small></div></div><div class="card milestone"><div class="milestone-icon">☀️</div><div><b>فترة الصيف</b><small id="summerPlan">ادخار 500 ر.س شهرياً</small></div></div><div class="card milestone"><div class="milestone-icon">🧭</div><div><b>الوجهة</b><small>تركيا · رحلة 2027</small></div></div></div>
+      </section>
+
+      <section class="page" id="achievements">
+        <div class="page-head"><div><div class="eyebrow">الاستمرارية تصنع الفرق</div><h1>الإنجازات والستريك</h1><p class="sub">احتفل بكل خطوة، حتى لو كانت صغيرة.</p></div></div>
+        <div class="grid stats"><div class="card"><div class="stat-top">أطول سلسلة <span class="stat-icon">🏆</span></div><div class="stat-value" id="bestStreak">0</div><div class="stat-note">أيام متتالية</div></div><div class="card"><div class="stat-top">إجمالي الإيداعات <span class="stat-icon">💎</span></div><div class="stat-value" id="achievementCount">0</div><div class="stat-note">عملية موثقة</div></div><div class="card"><div class="stat-top">نسبة الهدف <span class="stat-icon">◉</span></div><div class="stat-value" id="achievementPercent">0%</div><div class="stat-note">من ميزانية الرحلة</div></div><div class="card"><div class="stat-top">أيام منذ البداية <span class="stat-icon">⌁</span></div><div class="stat-value" id="daysSince">0</div><div class="stat-note">من أول إيداع</div></div></div>
+        <div class="section-title"><h2>شاراتك</h2><small>تُفتح تلقائياً مع تقدمك</small></div>
+        <div class="grid milestones" id="badgesGrid"></div>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="page-head"><div><div class="eyebrow">تحكم كامل</div><h1>الإعدادات والنسخ الاحتياطية</h1><p class="sub">خصص هدفك وخطتك، واحتفظ بنسخة من بياناتك.</p></div></div>
+        <div class="grid settings-grid">
+          <div class="card"><div class="card-head"><h2>إعدادات صندوق الرحلة</h2><span class="stat-icon">⚙</span></div>
+            <form id="settingsForm">
+              <div class="field"><label for="goalInput">الهدف المالي (ر.س)</label><input id="goalInput" type="number" min="1" required></div>
+              <div class="field"><label for="tripDate">موعد الرحلة المستهدف</label><input id="tripDate" type="date"></div>
+              <div class="field"><label for="studySaving">الادخار الشهري خلال الدراسة (ر.س)</label><input id="studySaving" type="number" min="0"></div>
+              <div class="field"><label for="summerSaving">الادخار الشهري خلال الصيف (ر.س)</label><input id="summerSaving" type="number" min="0"></div>
+              <button class="btn primary" type="submit">حفظ التغييرات</button>
+            </form>
+          </div>
+          <div class="card setting-card"><div class="card-head"><h2>النسخ الاحتياطية</h2><span class="stat-icon">⇧</span></div><p>صدّر نسخة JSON للاحتفاظ بإيداعاتك وإعداداتك، أو استورد نسخة سابقة لاستعادة بياناتك.</p>
+            <button class="btn primary" id="exportBtn" style="width:100%;justify-content:center;margin:8px 0">↓ تصدير نسخة احتياطية</button>
+            <label class="btn" for="importFile" style="width:100%;justify-content:center">↑ استيراد نسخة احتياطية</label><input id="importFile" type="file" accept="application/json,.json" hidden>
+            <div class="notice" style="margin-top:18px">بيانات الموقع محفوظة محلياً في المتصفح. حذف بيانات المتصفح قد يؤدي إلى فقدانها؛ احتفظ بنسخة احتياطية دورياً.</div>
+            <button class="btn ghost" id="resetBtn" style="color:var(--red);width:100%;justify-content:center">إعادة ضبط بيانات الموقع</button>
+          </div>
+        </div>
+      </section>
+      <footer style="text-align:center;color:#718198;font-size:10px;padding:35px 0 5px;border-top:1px solid var(--line);margin-top:35px">Türkiye Travel Fund · Made with curiosity, discipline & ambition.</footer>
+    </div>
+  </main>
 </div>
-<footer class="footer">Türkiye Travel Fund · مجتبى البشراوي · بياناتك محفوظة محليًا في هذا المتصفح. صدّر نسخة احتياطية بشكل دوري.</footer>
-</main>
+<div class="toast" id="toast"></div>
 <script>
-const KEY='mujtaba_turkiye_fund_v3';
-const defaults={deposits:[],settings:{studyRate:200,midRate:200,summerRate:500,goal:6000,start:'2027-01-10',target:'2028-06',days:7,dayCost:250,reserve:700,holidayRule:'yes',coreGoal:4200,shoppingGoal:500,activityGoal:600,emergencyGoal:700},calendar:{
-'2027-01':'study','2027-02':'study','2027-03':'study','2027-04':'study','2027-05':'study','2027-06':'summer','2027-07':'summer','2027-08':'study','2027-09':'study','2027-10':'study','2027-11':'study','2027-12':'study',
-'2028-01':'study','2028-02':'study','2028-03':'study','2028-04':'study','2028-05':'study','2028-06':'summer','2028-07':'summer','2028-08':'study','2028-09':'study','2028-10':'study','2028-11':'study','2028-12':'study'}};
-let db=load();
-function load(){try{let x=JSON.parse(localStorage.getItem(KEY));return x?{...structuredClone(defaults),...x,settings:{...defaults.settings,...x.settings},calendar:{...defaults.calendar,...x.calendar}}:structuredClone(defaults)}catch(e){return structuredClone(defaults)}}
-function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
-function el(id){return document.getElementById(id)}
-function num(n){return Math.round(Number(n)||0).toLocaleString('ar-EG')}
-function keyMonth(d){return d.slice(0,7)}
-function bal(){return db.deposits.reduce((a,x)=>a+Number(x.amount),0)}
-function settingsFromUI(){Object.keys(db.settings).forEach(k=>{let x=el(k);if(x)db.settings[k]=x.type==='number'?Number(x.value):x.value})}
-function saveSettings(){settingsFromUI();save()}
-function setInputs(){Object.entries(db.settings).forEach(([k,v])=>{if(el(k))el(k).value=v})}
-function rateFor(k){let t=db.calendar[k]||'study',s=db.settings;return t==='summer'?s.summerRate:t==='mid'?s.midRate:t==='holiday'?0:s.studyRate}
-function nextPayment(){let d=new Date();d.setDate(1);d.setMonth(d.getMonth()+1);let k=d.toISOString().slice(0,7);return{date:d,amount:rateFor(k)}}
-function forecastDate(extra=0,target=null){let need=Math.max(0,(target??db.settings.goal)-bal()-extra),d=new Date();d.setDate(1);for(let i=0;i<120&&need>0;i++){need-=rateFor(d.toISOString().slice(0,7));d.setMonth(d.getMonth()+1)}return d}
-function addDeposit(a,dt,kind,note){let amount=a??Number(el('amount').value),date=dt??el('date').value,k=kind??el('kind').value,n=note??el('note').value;if(!amount||amount<=0||!date){alert('أدخل مبلغًا وتاريخًا صحيحين.');return}db.deposits.push({id:Date.now()+Math.random(),amount,date,kind:k,note:n});db.deposits.sort((x,y)=>x.date.localeCompare(y.date));el('amount').value='';el('note').value='';save()}
-function quick(n){el('amount').value=n;addDeposit()}
-function removeDeposit(id){if(confirm('تحذف هذا الإيداع؟')){db.deposits=db.deposits.filter(x=>x.id!==id);save()}}
-function streak(){let months=[...new Set(db.deposits.map(x=>keyMonth(x.date)))].sort(),d=new Date();d.setDate(1);let c=0;for(let i=0;i<60;i++){let k=d.toISOString().slice(0,7);if(months.includes(k)){c++;d.setMonth(d.getMonth()-1)}else if(i===0)d.setMonth(d.getMonth()-1);else break}return c}
-function renderCalendar(){let y=Number(el('calYear').value||2027),names=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];el('calendarGrid').innerHTML=names.map((n,i)=>{let k=`${y}-${String(i+1).padStart(2,'0')}`,v=db.calendar[k]||'study';return `<div class="month"><strong>${n}</strong><select aria-label="${n}" onchange="setMonth('${k}',this.value)"><option value="study" ${v==='study'?'selected':''}>دراسة</option><option value="mid" ${v==='mid'?'selected':''}>منتصف السنة</option><option value="summer" ${v==='summer'?'selected':''}>صيف</option><option value="holiday" ${v==='holiday'?'selected':''}>إجازة</option></select><small>الدفعة المقترحة: ${num(rateFor(k))} ر.س</small></div>`}).join('')}
-function setMonth(k,v){db.calendar[k]=v;save()}
-function renderAchievements(){let b=bal(),s=streak(),g=db.settings.goal,a=[['أول إيداع',db.deposits.length>0],['٥٠٠ ريال',b>=500],['ربع الهدف',b>=g*.25],['نصف الهدف',b>=g*.5],['٩٠٪ من الهدف',b>=g*.9],['٣ أشهر متتالية',s>=3],['٦ أشهر متتالية',s>=6]];el('achievements').innerHTML=a.map(x=>`<div class="item"><span>${x[0]}</span><span class="badge" style="${x[1]?'':'opacity:.4'}">${x[1]?'مكتمل':'مقفل'}</span></div>`).join('')}
-function renderHistory(){let h=el('historyList');if(!db.deposits.length){h.innerHTML='<div class="mutedbox">ما سجلت أي إيداع حتى الآن.</div>';return}h.innerHTML=[...db.deposits].reverse().map(x=>`<div class="item"><div><strong>${num(x.amount)} ر.س</strong><small>${x.date} · ${{study:'دراسة',summer:'صيف',mid:'منتصف السنة',extra:'إضافي'}[x.kind]||x.kind}${x.note?' · '+escapeHTML(x.note):''}</small></div><button class="danger" onclick="removeDeposit(${x.id})">حذف</button></div>`).join('')}
-function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function allocation(){let s=db.settings,t=s.coreGoal+s.shoppingGoal+s.activityGoal+s.emergencyGoal;el('allocationTotal').textContent=num(t)+' ر.س';el('allocationWarning').textContent=t===s.goal?'توزيع الميزانية متوافق مع هدف الصندوق.':`مجموع التوزيع ${num(t)} ريال، وهدف الصندوق ${num(s.goal)} ريال.`}
-function tripFit(){let k=db.settings.target,v=db.calendar[k]||'study';el('tripFit').textContent=['summer','mid','holiday'].includes(v)?'الشهر محدد كإجازة في تقويمك. تأكد من مواعيدك الفعلية قبل الحجز.':'الشهر محدد كدراسة. راجع التقويم أو اختر شهر إجازة.'}
-function render(){let b=bal(),s=db.settings,g=s.goal||1,p=Math.min(100,b/g*100),n=nextPayment();el('balance').textContent=num(b);el('goalTag').textContent='الهدف '+num(g)+' ر.س';el('progress').style.width=p+'%';el('pct').textContent=p.toFixed(1).replace('.', '٫')+'٪';el('left').textContent='متبقي '+num(Math.max(0,g-b))+' ريال';el('nextPay').textContent=num(n.amount)+' ر.س';el('nextDate').textContent=n.date.toLocaleDateString('ar-SA',{month:'short',year:'numeric'});el('forecast').textContent=forecastDate().toLocaleDateString('ar-SA',{month:'short',year:'numeric'});let st=streak();el('streak').textContent=num(st);el('streakbar').style.width=Math.min(100,st/6*100)+'%';el('streakmsg').textContent=st>=6?'ستة أشهر متتالية، استمر!':st>=3?'قاعد تبني عادة ممتازة.':'سجل إيداعًا كل شهر عشان تحافظ على الاستمرارية.';el('achievementMini').textContent=b>=g?'وصلت لهدف الصندوق!':`باقي ${num(g-b)} ريال وتوصل لهدفك.`;renderAchievements();renderHistory();renderCalendar();allocation();advanceCalc();drawChart();tripFit();setInputs()}
-function simulate(){let n=Number(el('extra').value)||0,m=el('extraUse').value,s=db.settings;if(!n){el('simulation').textContent='اكتب المبلغ عشان نحسب أثره.';return}let t='';if(m==='early'){let d=forecastDate(n);t=`لو أضفت ${num(n)} ريال، يصير رصيدك ${num(bal()+n)} ريال، وموعد الوصول المالي المتوقع ${d.toLocaleDateString('ar-SA',{month:'long',year:'numeric'})}.`}else if(m==='spend')t=`تقدر تخصص ${num(n)} ريال للتسوق والأنشطة. الرصيد بعد الإيداع بيكون ${num(bal()+n)} ريال.`;else if(m==='extend'){let days=Math.floor(n/s.dayCost);t=`المبلغ يغطي تقريبًا ${num(days)} أيام إضافية بتكلفة ${num(s.dayCost)} ريال لليوم، ويتبقى ${num(n-days*s.dayCost)} ريال.`}else t=`تقسيم مقترح: ${num(n*.6)} ريال لتقديم موعد الهدف و${num(n*.4)} ريال للأنشطة والتسوق.`;el('simulation').textContent=t}
-function applyExtra(){let n=Number(el('extra').value);if(n<=0){alert('اكتب المبلغ أولاً');return}addDeposit(n,new Date().toISOString().slice(0,10),'extra','مبلغ إضافي');el('extra').value='';simulate()}
-function advanceCalc(){let n=Number(el('advanceAmount').value)||0,t=Number(el('tripTarget').value)||db.settings.goal,d=forecastDate(n,t),avail=Object.entries(db.calendar).filter(([k,v])=>['mid','summer','holiday'].includes(v)&&k>=new Date().toISOString().slice(0,7)).map(([k])=>k).sort(),k=avail.find(k=>k>=d.toISOString().slice(0,7));el('advanceResult').textContent=`الوصول المالي المتوقع: ${d.toLocaleDateString('ar-SA',{month:'long',year:'numeric'})}. ${k?'أقرب شهر إجازة محدد بعده: '+k+'.':'ما حددت إجازات مستقبلية كفاية في التقويم.'}`}
-function delayTrip(){let d=el('delay').value;if(!d)return;db.settings.target=d;save();el('delayMsg').textContent='تم تغيير موعد الرحلة إلى '+d+' مع الاحتفاظ بكل الإيداعات.'}
-function resetTarget(){db.settings.target='2028-06';save();el('delayMsg').textContent='تمت استعادة الموعد الافتراضي.'}
-function extensionCalc(){let days=Number(el('newDays').value),old=db.settings.days,cash=Number(el('extensionCash').value),cost=Math.max(0,days-old)*db.settings.dayCost;el('extensionResult').textContent=days<=old?'المدة الجديدة مو أطول من المدة الحالية.':`الزيادة من ${num(old)} إلى ${num(days)} أيام تكلف تقريبًا ${num(cost)} ريال. المبلغ الناقص: ${num(Math.max(0,cost-cash))} ريال.`}
-function drawChart(){let c=el('chart'),x=c.getContext('2d'),w=c.width,h=c.height,m={l:52,r:18,t:18,b:34},v={};x.clearRect(0,0,w,h);db.deposits.forEach(d=>{let k=keyMonth(d.date);v[k]=(v[k]||0)+Number(d.amount)});let keys=Object.keys(v).sort(),sum=0,series=keys.map(k=>sum+=v[k]);if(!keys.length){x.fillStyle='#A2A2B0';x.font='16px Rubik';x.fillText('سجّل أول إيداع عشان يظهر الرسم',w/2-145,h/2);return}let max=Math.max(db.settings.goal,...series)*1.1;x.font='12px Rubik';x.fillStyle='#A2A2B0';x.strokeStyle='#2F2F3A';for(let i=0;i<4;i++){let y=m.t+(h-m.t-m.b)*i/3;x.beginPath();x.moveTo(m.l,y);x.lineTo(w-m.r,y);x.stroke();x.fillText(num(max*(1-i/3)),4,y+4)}x.strokeStyle='#3D8BFF';x.lineWidth=3;x.beginPath();series.forEach((v,i)=>{let px=m.l+(w-m.l-m.r)*(keys.length===1?.5:i/(keys.length-1)),py=h-m.b-(h-m.t-m.b)*v/max;i?x.lineTo(px,py):x.moveTo(px,py)});x.stroke();x.fillStyle='#3D8BFF';series.forEach((v,i)=>{let px=m.l+(w-m.l-m.r)*(keys.length===1?.5:i/(keys.length-1)),py=h-m.b-(h-m.t-m.b)*v/max;x.beginPath();x.arc(px,py,4,0,Math.PI*2);x.fill()});x.fillStyle='#A2A2B0';x.fillText(keys[0],m.l,h-8);x.fillText(keys[keys.length-1],w-70,h-8)}
-function exportData(){let b=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='mujtaba-turkiye-backup.json';a.click();URL.revokeObjectURL(a.href)}
-function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!Array.isArray(d.deposits)||!d.settings)throw 0;db={...structuredClone(defaults),...d,settings:{...defaults.settings,...d.settings},calendar:{...defaults.calendar,...d.calendar}};save();alert('تم استيراد النسخة الاحتياطية.')}catch(_){alert('ملف النسخة الاحتياطية غير صالح.')}};r.readAsText(f)}
-el('date').value=new Date().toISOString().slice(0,10);render();
+(() => {
+  const KEY = 'albashrawi_turkiye_travel_fund_v3';
+  const defaults = {goal:8000,tripDate:'2027-07-01',studySaving:200,summerSaving:500,deposits:[]};
+  let data = load();
+  let calendarDate = new Date(2027,0,1);
+  const $ = id => document.getElementById(id);
+  const money = n => new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n||0));
+  const today = () => new Date().toISOString().slice(0,10);
+  const save = () => localStorage.setItem(KEY,JSON.stringify(data));
+  function load(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return {...defaults}}}
+  function toast(msg){const el=$('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2600)}
+  function total(){return data.deposits.reduce((s,d)=>s+Number(d.amount||0),0)}
+  function percent(){return Math.min(100,Math.round(total()/Math.max(1,data.goal)*100))}
+  function dateFmt(s){if(!s)return '—';return new Date(s+'T12:00:00').toLocaleDateString('ar-SA',{year:'numeric',month:'short',day:'numeric'})}
+  function streakInfo(){
+    const dates=[...new Set(data.deposits.map(d=>d.date))].sort();
+    if(!dates.length)return {current:0,best:0,dates:[]};
+    let best=1,run=1;
+    for(let i=1;i<dates.length;i++){const diff=(new Date(dates[i]+'T12:00:00')-new Date(dates[i-1]+'T12:00:00'))/86400000;run=diff===1?run+1:1;best=Math.max(best,run)}
+    const last=new Date(dates[dates.length-1]+'T12:00:00'),now=new Date(today()+'T12:00:00');
+    const gap=Math.floor((now-last)/86400000);
+    let current=(gap<=1)?1:0;
+    if(current){let i=dates.length-1;while(i>0){const diff=(new Date(dates[i]+'T12:00:00')-new Date(dates[i-1]+'T12:00:00'))/86400000;if(diff===1){current++;i--}else break}}
+    return {current,best,dates};
+  }
+  function render(){
+    const t=total(),p=percent(),left=Math.max(0,data.goal-t),s=streakInfo();
+    $('statSaved').innerHTML=money(t)+' <small>ر.س</small>';$('statRemaining').innerHTML=money(left)+' <small>ر.س</small>';
+    $('statStreak').textContent=s.current;$('statCount').textContent=data.deposits.length;
+    $('fundSaved').innerHTML=money(t)+' <small>ر.س</small>';$('fundPercent').textContent=p+'%';$('fundBar').style.width=p+'%';
+    $('fundTarget').textContent=money(data.goal)+' ر.س';$('fundLeft').textContent=money(left)+' ر.س';$('tripDateLabel').textContent=data.tripDate?dateFmt(data.tripDate):'غير محدد';
+    $('ringPercent').textContent=p+'%';$('ringProgress').style.strokeDashoffset=408.4-(408.4*p/100);
+    $('ringCaption').textContent=p>=100?'وصلت إلى هدفك! حان وقت التخطيط للحجز.':p>=50?'أكثر من نصف الطريق! استمر، أنت تقترب.':t>0?'تقدم ممتاز، كل إيداع يصنع فرقاً.':'بداية جميلة، أول خطوة تنتظرك.';
+    $('sideGoal').textContent=money(data.goal)+' ر.س';$('sideProgress').style.width=p+'%';$('sidePercent').textContent=p+'% من الهدف';
+    $('depositTotal').innerHTML=money(t)+' <small>ر.س</small>';
+    const monthly=data.deposits.filter(d=>d.type==='شهري').reduce((a,d)=>a+Number(d.amount),0);
+    const extra=t-monthly;$('monthlyTotal').textContent=money(monthly)+' ر.س';$('extraTotal').textContent=money(extra)+' ر.س';
+    $('monthlyBar').style.width=(t?monthly/t*100:0)+'%';$('extraBar').style.width=(t?extra/t*100:0)+'%';
+    $('depositCountLabel').textContent=data.deposits.length+' عملية';
+    $('streakBig').textContent=s.current;$('bestStreak').textContent=s.best;$('achievementCount').textContent=data.deposits.length;$('achievementPercent').textContent=p+'%';
+    $('statStreak').textContent=s.current;
+    $('streakHint').textContent=s.current?'رائع! حافظ على السلسلة بإيداع جديد غداً.':'ابدأ سلسلتك اليوم — الاستمرارية أهم من المبلغ.';
+    const first=data.deposits.map(d=>d.date).sort()[0];$('daysSince').textContent=first?Math.max(1,Math.floor((new Date(today())-new Date(first))/86400000)+1):0;
+    renderRecent();renderTable();renderStreakDays(s);renderBadges(s);
+    $('goalInput').value=data.goal;$('tripDate').value=data.tripDate;$('studySaving').value=data.studySaving;$('summerSaving').value=data.summerSaving;
+    $('studyPlan').textContent='ادخار '+money(data.studySaving)+' ر.س شهرياً';$('summerPlan').textContent='ادخار '+money(data.summerSaving)+' ر.س شهرياً';
+  }
+  function renderRecent(){
+    const list=[...data.deposits].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);
+    $('recentDeposits').innerHTML=list.length?list.map(d=>`<div class="deposit-row"><div class="deposit-symbol">${d.type==='شهري'?'↗':'✦'}</div><div class="deposit-info"><b>${escapeHtml(d.note||d.type)}</b><small>${dateFmt(d.date)} · ${escapeHtml(d.type)}</small></div><div class="deposit-value">+${money(d.amount)} ر.س</div></div>`).join(''):'<div class="empty">لا توجد إيداعات بعد. ابدأ بأول خطوة!</div>';
+  }
+  function renderTable(){
+    const list=[...data.deposits].sort((a,b)=>b.date.localeCompare(a.date));
+    $('depositTable').innerHTML=list.length?list.map(d=>`<tr><td>${dateFmt(d.date)}</td><td>${escapeHtml(d.type)}</td><td>${escapeHtml(d.note||'—')}</td><td style="color:var(--green);direction:ltr">+${money(d.amount)} ر.س</td><td><button class="text-link" data-delete="${d.id}" style="color:var(--red)">حذف</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty">لا توجد عمليات مسجلة.</td></tr>';
+  }
+  function renderStreakDays(s){
+    const names=['أحد','إثن','ثلا','أرب','خمي','جمع','سبت'],now=new Date();
+    let start=new Date(now);start.setDate(now.getDate()-6);let html='';
+    for(let i=0;i<7;i++){const d=new Date(start);d.setDate(start.getDate()+i);const key=d.toISOString().slice(0,10);const done=s.dates.includes(key);html+=`<div class="streak-day">${names[d.getDay()]}<i class="${done?'done':''}">${done?'✓':d.getDate()}</i></div>`}
+    $('streakDays').innerHTML=html;
+  }
+  function renderBadges(s){
+    const t=total(),items=[
+      ['🌱','أول خطوة','سجّل أول إيداع',data.deposits.length>=1],
+      ['🔥','أسبوع من الالتزام','سلسلة 7 أيام',s.best>=7],
+      ['💰','أول 1,000','اجمع أول ألف ريال',t>=1000],
+      ['🚀','نصف الطريق','حقق 50% من الهدف',percent()>=50],
+      ['🏆','وصلت للقمة','أكمل هدف الادخار',t>=data.goal],
+      ['💎','عشرون إيداعاً','وثّق 20 عملية',data.deposits.length>=20]
+    ];
+    $('badgesGrid').innerHTML=items.map(x=>`<div class="card milestone" style="opacity:${x[3]?1:.48}"><div class="milestone-icon">${x[0]}</div><div><b>${x[1]} ${x[3]?'✓':'🔒'}</b><small>${x[2]}</small></div></div>`).join('');
+  }
+  function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function showPage(name){
+    document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===name));
+    document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===name));
+    const labels={overview:'نظرة عامة',deposits:'الإيداعات والسجل',calendar:'التقويم والخطة',achievements:'الإنجازات والستريك',settings:'الإعدادات والنسخ'};
+    $('crumbTitle').textContent=labels[name]||'نظرة عامة';$('sidebar').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});
+    if(name==='calendar')renderCalendar();
+  }
+  document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
+  $('menuBtn').addEventListener('click',()=>$('sidebar').classList.toggle('open'));
+  $('quickAdd').addEventListener('click',()=>{showPage('deposits');$('depositAmount').focus()});
+  $('depositDate').value=today();
+  $('depositForm').addEventListener('submit',e=>{
+    e.preventDefault();const amount=Number($('depositAmount').value);if(!amount||amount<=0)return;
+    data.deposits.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),amount,date:$('depositDate').value||today(),type:$('depositType').value,note:$('depositNote').value.trim()});
+    save();render();e.target.reset();$('depositDate').value=today();toast('تم حفظ الإيداع بنجاح ✨');
+  });
+  $('depositTable').addEventListener('click',e=>{
+    const id=e.target.dataset.delete;if(!id)return;
+    if(confirm('هل تريد حذف هذا الإيداع؟')){data.deposits=data.deposits.filter(d=>d.id!==id);save();render();toast('تم حذف الإيداع');}
+  });
+  $('settingsForm').addEventListener('submit',e=>{
+    e.preventDefault();data.goal=Math.max(1,Number($('goalInput').value)||8000);data.tripDate=$('tripDate').value;data.studySaving=Math.max(0,Number($('studySaving').value)||0);data.summerSaving=Math.max(0,Number($('summerSaving').value)||0);save();render();toast('تم تحديث إعدادات الرحلة');
+  });
+  $('exportBtn').addEventListener('click',()=>{
+    const blob=new Blob([JSON.stringify({app:'Türkiye Travel Fund',version:3,exportedAt:new Date().toISOString(),data},null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='turkiye-travel-fund-backup.json';a.click();URL.revokeObjectURL(url);toast('تم تجهيز النسخة الاحتياطية');
+  });
+  $('importFile').addEventListener('change',async e=>{
+    const file=e.target.files[0];if(!file)return;
+    try{const parsed=JSON.parse(await file.text());const incoming=parsed.data||parsed;if(!Array.isArray(incoming.deposits)||!Number(incoming.goal))throw new Error();data={...defaults,...incoming};save();render();toast('تم استيراد البيانات بنجاح');}
+    catch{toast('تعذر قراءة الملف. تأكد أنه نسخة احتياطية صحيحة.')}
+    e.target.value='';
+  });
+  $('resetBtn').addEventListener('click',()=>{
+    if(confirm('سيتم حذف جميع الإيداعات والإعدادات المحفوظة على هذا المتصفح. هل أنت متأكد؟')){data={...defaults,deposits:[]};save();render();toast('تمت إعادة ضبط البيانات');}
+  });
+  function renderCalendar(){
+    const y=calendarDate.getFullYear(),m=calendarDate.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);
+    $('calendarTitle').textContent=calendarDate.toLocaleDateString('ar-SA',{month:'long',year:'numeric'});
+    const names=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];let html=names.map(n=>`<div class="cal-day-name">${n}</div>`).join('');
+    for(let i=0;i<first.getDay();i++)html+='<div class="cal-day muted"></div>';
+    for(let d=1;d<=last.getDate();d++){const date=new Date(y,m,d),key=date.toISOString().slice(0,10),isToday=key===today(),has=data.deposits.some(x=>x.date===key);html+=`<div class="cal-day ${isToday?'today':''}">${d}${has?'<span class="event">● إيداع</span>':''}</div>`}
+    $('calendarGrid').innerHTML=html;
+  }
+  $('prevMonth').addEventListener('click',()=>{calendarDate.setMonth(calendarDate.getMonth()-1);renderCalendar()});
+  $('nextMonth').addEventListener('click',()=>{calendarDate.setMonth(calendarDate.getMonth()+1);renderCalendar()});
+  render();renderCalendar();
+})();
 </script>
-</body></html>
+</body>
+</html>
